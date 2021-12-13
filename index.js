@@ -46,3 +46,16 @@ const log = console.log;
 // ============================================
 // Map, Reduce, and Filter - JS Array Functions
 // ============================================
+
+// Map
+// map() is used for createing a new array from an exixting one,
+// applying a function to each one of the elements of the first array.
+
+// Syntax
+// let new_array = arr.map(function callback(elemnt, index, array) {
+//   // Return value for new_array
+// }[, thisArg]);
+
+const numbers = [1, 2, 3, 4];
+const doubled = numbers.map(item => item * 2);
+log(doubled);
