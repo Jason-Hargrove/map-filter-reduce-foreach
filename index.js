@@ -47,7 +47,7 @@ const log = console.log;
 // Map, Reduce, and Filter - JS Array Functions
 // ============================================
 
-// Map
+// ===== Map =====
 // map() is used for createing a new array from an exixting one,
 // applying a function to each one of the elements of the first array.
 
@@ -56,6 +56,37 @@ const log = console.log;
 //   // Return value for new_array
 // }[, thisArg]);
 
+// Example
+// const numbers = [1, 2, 3, 4];
+// const doubled = numbers.map(item => item * 2);
+// log(doubled);
+
+// ===== Filter =====
+// filter() method takes each element in the array and applies a conditional statement against it.
+// If this conditional returns true, the element gets pushed to the output arr.
+// If condition returns false, the element does not get pushed to the output arr.
+
+// Syntax
+// let new_array = arr.filter(function callback(element, index, array) {
+//   // Return true of false
+// }[, thisArg]);
+
+// Examples
 const numbers = [1, 2, 3, 4];
-const doubled = numbers.map(item => item * 2);
-log(doubled);
+const evens = numbers.filter(item => item % 2 === 0);
+log(evens);
+
+const randomArr = [null, "Jason", "Is cool!", 2, undefined, false];
+const notNull = randomArr.filter(Boolean);
+log(notNull);
+
+const students = [
+  { name: 'Quincy' , grade: 96 },
+  { name: 'Jason', grade: 84 },
+  { name: 'Alexis' , grade: 100 },
+  { name: 'Sam', grade: 65 },
+  { name: 'Katie', grade: 90 },
+]
+
+const studentGrades = students.filter(student => student.grade >= 90);
+log(studentGrades);
