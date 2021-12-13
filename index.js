@@ -72,21 +72,49 @@ const log = console.log;
 // }[, thisArg]);
 
 // Examples
-const numbers = [1, 2, 3, 4];
-const evens = numbers.filter(item => item % 2 === 0);
-log(evens);
+// const numbers = [1, 2, 3, 4];
+// const evens = numbers.filter(item => item % 2 === 0);
+// log(evens);
+//
+// const randomArr = [null, "Jason", "Is cool!", 2, undefined, false];
+// const notNull = randomArr.filter(Boolean);
+// log(notNull);
+//
+// const students = [
+//   { name: 'Quincy' , grade: 96 },
+//   { name: 'Jason', grade: 84 },
+//   { name: 'Alexis' , grade: 100 },
+//   { name: 'Sam', grade: 65 },
+//   { name: 'Katie', grade: 90 },
+// ]
+//
+// const studentGrades = students.filter(student => student.grade >= 90);
+// log(studentGrades);
 
-const randomArr = [null, "Jason", "Is cool!", 2, undefined, false];
-const notNull = randomArr.filter(Boolean);
-log(notNull);
 
-const students = [
-  { name: 'Quincy' , grade: 96 },
-  { name: 'Jason', grade: 84 },
-  { name: 'Alexis' , grade: 100 },
-  { name: 'Sam', grade: 65 },
-  { name: 'Katie', grade: 90 },
-]
+// ===== Reduce =====
+// reduce() reduces and arr of values down to just one value.
+// To get the output value, it runs a reducer function on each element in the arr.
 
-const studentGrades = students.filter(student => student.grade >= 90);
-log(studentGrades);
+// Syntax
+// arr.reduce(callback[, initialValue]);
+// const numbers = [1, 2, 3, 4];
+// const sum = numbers.reduce(function (result, item) {
+//   return result + item;
+// }, 0);
+// log(sum); // 10
+
+let pets = ['dog', 'chicken', 'cat', 'dog', 'chicken', 'rabbit'];
+
+let petCounts = pets.reduce(function(obj, pet) {
+  if (!obj[pet]) {
+    obj[pet] = 1;
+  } else {
+      obj[pet]++
+  }
+  return obj;
+}, {});
+
+log(petCounts);
+
+// Watch video next.  Link saved in "Working" folder on Firefox.
