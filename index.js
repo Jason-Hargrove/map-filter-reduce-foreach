@@ -43,10 +43,6 @@ const log = console.log;
 // log(isNotBread);
 
 
-
-
-
-
-// 3. ===== Map =====
-
-// 4. ===== Reduce =====
+// ============================================
+// Map, Reduce, and Filter - JS Array Functions
+// ============================================
